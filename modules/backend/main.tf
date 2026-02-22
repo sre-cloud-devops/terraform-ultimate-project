@@ -30,16 +30,18 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "encryption_exampl
   }
 }
 
-resource "aws_dynamodb_table" "dyanmodb_statelock" {
-  name             = "example"
-  hash_key         = "LockID"
-  billing_mode     = "PAY_PER_REQUEST"
-  stream_enabled   = true
-  stream_view_type = "NEW_AND_OLD_IMAGES"
+# resource "aws_dynamodb_table" "dyanmodb_statelock" {
+#   name             = "example"
+#   hash_key         = "LockID"
+#   billing_mode     = "PAY_PER_REQUEST"
+#   stream_enabled   = true
+#   stream_view_type = "NEW_AND_OLD_IMAGES"
 
-  attribute {
-    name = "LockID"
-    type = "S"
-  }
+#   attribute {
+#     name = "LockID"
+#     type = "S"
+#   }
 
-}
+# }
+
+
